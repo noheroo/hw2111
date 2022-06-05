@@ -17,11 +17,13 @@ public class StoreServiceImpl implements StoreService {
     }
 
     @Override
-    public void addItem(Integer id) {
-        if (id > 0) {
-            basket.add(id);
-        } else {
-            throw new WrongDataException();
+    public void addItem(List<Integer> id) {
+        for (Integer integer : id) {
+            if (integer > 0) {
+                basket.add(integer);
+            } else {
+                throw new WrongDataException();
+            }
         }
     }
 

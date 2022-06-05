@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface StoreService {
 
-    void addItem(Integer id);
+    void addItem(List <Integer> id);
 
     List<Integer> getBasket();
 }

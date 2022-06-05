@@ -19,9 +19,9 @@ public class StoreController {
     }
 
     @GetMapping("/add")
-    public String addItem(@RequestParam Integer idItem) {
+    public String addItem(@RequestParam List <Integer> idItem) {
         storeService.addItem(idItem);
-        return "Item added";
+        return "Item(s) added";
     }
 
     @GetMapping("/get")
